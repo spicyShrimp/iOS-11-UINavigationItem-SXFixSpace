@@ -31,7 +31,8 @@ typedef NS_ENUM(NSInteger, SXBarViewPosition) {
         if ([view isKindOfClass:UIStackView.class] && view.superview) {
             if (self.position == SXBarViewPositionLeft) {
                 for (NSLayoutConstraint *constraint in view.superview.constraints) {
-                    if ([constraint.firstItem isKindOfClass:[UILayoutGuide class]] && (constraint.firstAttribute == NSLayoutAttributeLeading || constraint.firstAttribute == NSLayoutAttributeLeft)) {
+                    if (([constraint.firstItem isKindOfClass:UILayoutGuide.class] &&
+                         constraint.firstAttribute == NSLayoutAttributeTrailing)) {
                         [view.superview removeConstraint:constraint];
                     }
                 }
@@ -45,7 +46,8 @@ typedef NS_ENUM(NSInteger, SXBarViewPosition) {
                 self.applied = YES;
             } else if (self.position == SXBarViewPositionRight) {
                 for (NSLayoutConstraint *constraint in view.superview.constraints) {
-                    if ([constraint.firstItem isKindOfClass:[UILayoutGuide class]] && (constraint.firstAttribute == NSLayoutAttributeTrailing || constraint.firstAttribute == NSLayoutAttributeRight)) {
+                    if (([constraint.firstItem isKindOfClass:UILayoutGuide.class] &&
+                         constraint.secondAttribute == NSLayoutAttributeLeading)) {
                         [view.superview removeConstraint:constraint];
                     }
                 }

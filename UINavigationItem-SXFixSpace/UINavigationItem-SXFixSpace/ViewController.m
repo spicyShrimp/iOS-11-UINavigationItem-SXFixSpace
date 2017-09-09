@@ -20,7 +20,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.title = [@(self.navigationController.viewControllers.count) stringValue];
+    
+    if (self.navigationController.viewControllers.count % 2) {
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 40)];
+        view.backgroundColor = [UIColor redColor];
+        self.navigationItem.titleView = view;
+    } else {
+        self.navigationItem.title = [@(self.navigationController.viewControllers.count) stringValue];
+    }
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
