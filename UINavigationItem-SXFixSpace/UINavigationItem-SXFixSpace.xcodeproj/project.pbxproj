@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5699996F1F6FCBC600C690DB /* UINavigationController+SXFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 5699996E1F6FCBC600C690DB /* UINavigationController+SXFullScreen.m */; };
 		56AE73B21F6242730066856D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AE73B11F6242730066856D /* AppDelegate.m */; };
 		56AE73B51F6242730066856D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AE73B41F6242730066856D /* ViewController.m */; };
 		56AE73B81F6242730066856D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AE73B61F6242730066856D /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5699996D1F6FCBC600C690DB /* UINavigationController+SXFullScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SXFullScreen.h"; sourceTree = "<group>"; };
+		5699996E1F6FCBC600C690DB /* UINavigationController+SXFullScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SXFullScreen.m"; sourceTree = "<group>"; };
 		56AE73AD1F6242730066856D /* UINavigationItem-SXFixSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UINavigationItem-SXFixSpace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AE73B01F6242730066856D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56AE73B11F6242730066856D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 		56AE73AF1F6242730066856D /* UINavigationItem-SXFixSpace */ = {
 			isa = PBXGroup;
 			children = (
+				5699996D1F6FCBC600C690DB /* UINavigationController+SXFullScreen.h */,
+				5699996E1F6FCBC600C690DB /* UINavigationController+SXFullScreen.m */,
 				56AE73CC1F62445A0066856D /* UIBarButtonItem+SXCreate.h */,
 				56AE73CD1F62445B0066856D /* UIBarButtonItem+SXCreate.m */,
 				56AE73CA1F6242B70066856D /* NSObject+SXRuntime.h */,
@@ -162,6 +167,7 @@
 				56AE73C01F6242730066856D /* main.m in Sources */,
 				56AE73C81F62429C0066856D /* UINavigationItem+SXFixSpace.m in Sources */,
 				56AE73B21F6242730066856D /* AppDelegate.m in Sources */,
+				5699996F1F6FCBC600C690DB /* UINavigationController+SXFullScreen.m in Sources */,
 				56AE73CB1F6242B70066856D /* NSObject+SXRuntime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
