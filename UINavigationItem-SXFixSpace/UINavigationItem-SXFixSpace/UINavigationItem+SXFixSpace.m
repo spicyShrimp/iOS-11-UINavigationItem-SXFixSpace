@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, SXBarViewPosition) {
             } else if (self.position == SXBarViewPositionRight) {
                 for (NSLayoutConstraint *constraint in view.superview.constraints) {
                     if (([constraint.firstItem isKindOfClass:UILayoutGuide.class] &&
-                         constraint.secondAttribute == NSLayoutAttributeLeading)) {
+                         constraint.firstAttribute == NSLayoutAttributeLeading)) {
                         [view.superview removeConstraint:constraint];
                     }
                 }
