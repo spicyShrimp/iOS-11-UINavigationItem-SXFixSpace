@@ -1,9 +1,9 @@
 //
 //  UINavigationController+SXFullScreen.h
-//  SXAutoStreets
+//  UINavigationItem-SXFixSpace
 //
-//  Created by charles on 2017/7/7.
-//  Copyright © 2017年 上海澍勋电子商务有限公司. All rights reserved.
+//  Created by charles on 2017/9/8.
+//  Copyright © 2017年 None. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
