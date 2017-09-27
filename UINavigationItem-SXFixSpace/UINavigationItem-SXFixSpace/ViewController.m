@@ -37,8 +37,27 @@
 }
 
 -(void)configBarItem{
-    if (self.navigationController.viewControllers.count > 0) {
+    if (self.navigationController.viewControllers.count % 2) {
+        //单个按钮,这里增加了快捷创建的方式
         self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pushAction) image:[UIImage imageNamed:@"nav_add"]];
+    } else {
+        //多个按钮可以使用自定义视图的方式,这里没有添加快捷方式,使用的是普通的创建方法
+        //如有需要,可自行根据需求添加快捷创建多个按钮的方法
+        UIView *barView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 40)];
+        
+        UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn1.frame = CGRectMake(0, 0, 40, 40);
+        [btn1 setImage:[UIImage imageNamed:@"nav_add"] forState:UIControlStateNormal];
+        [btn1 addTarget:self action:@selector(pushAction) forControlEvents:UIControlEventTouchUpInside];
+        [barView addSubview:btn1];
+        
+        UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn2.frame = CGRectMake(40, 0, 40, 40);
+        [btn2 setImage:[UIImage imageNamed:@"nav_add"] forState:UIControlStateNormal];
+        [btn2 addTarget:self action:@selector(pushAction) forControlEvents:UIControlEventTouchUpInside];
+        [barView addSubview:btn2];
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:barView];
     }
     if (self.navigationController.viewControllers.count > 1) {
         self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(popAction) image:[UIImage imageNamed:@"nav_back"]];
