@@ -41,7 +41,7 @@
         //单个按钮,这里增加了快捷创建的方式
         self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pushAction) image:[UIImage imageNamed:@"nav_add"]];
     } else {
-        //多个按钮可以使用自定义视图的方式,这里没有添加快捷方式,使用的是普通的创建方法
+        //多个按钮(或者其他任意控件比如segment|slider.....)可以使用自定义视图的方式,这里没有添加快捷方式,使用的是普通的创建方法
         //如有需要,可自行根据需求添加快捷创建多个按钮的方法
         UIView *barView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 40)];
         
